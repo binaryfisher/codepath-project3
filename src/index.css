@@ -1,0 +1,103 @@
+
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    padding: 2em;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 8px #0000004d;
+    transform-style: preserve-3d;
+    font-weight: 600;
+    height: 250px;
+    inline-size: 700px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: .15s;
+   
+    
+}
+.card:hover {
+  box-shadow: 0 0 5px 2px #00000080;
+  transform-style: preserve-3d; 
+  transition: 0.2s;
+}
+
+.flipped {
+  transform: perspective(1000px) rotateX(180deg);
+  transition: 2s;
+   
+}
+
+.card .front,.card .back {
+  position: absolute;
+  padding: 5px;
+  justify-content: center;
+  backface-visibility: hidden
+}
+
+.card .back {
+  transform: rotateX(180deg)
+}
+
+.control-panel{
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  gap: 20px;
+
+}
+
+button {
+  border-radius: 8px;
+  border: none;
+  font-size: 1em;
+  width: 140px;
+  height: 50px;
+  font-weight: 500;
+  color: white;
+  font-family: inherit;
+  background-color:#04AA6D ;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+
+
+
+
+
+.button:hover {
+ background-color: hsl(158, 95%, 24%);
+ font-size: 1.3em;
+ 
+}
+
+
+
