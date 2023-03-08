@@ -1,25 +1,25 @@
-# Web Development Project 3 - *Name of App Here*
+# Web Development Project 3 - *Javascript Knowledge flashcards*
 
-Submitted by: **Your Name Here**
+Submitted by: **Shengwei Yu**
 
-This web app: **insert description**
+This web app: **This app test your basic Javascript knowledge using flashcards.**
 
-Time spent: **X** hours spent in total
+Time spent: **4** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [ ] **The user can enter their guess in a box before seeing the flipside of the card**
-- [ ] **Clicking on a submit button shows visual feedback about whether the answer was correct or incorrect**
-- [ ] **A back button is displayed on the card and can be used to return to the previous card in a set sequence**
-- [ ] **A next button is displayed on the card and can be used to navigate to the next card in a set sequence**
-- [ ] **A shuffle button is used to randomize the order of the cards**
+- [x] **The user can enter their guess in a box before seeing the flipside of the card**
+- [x] **Clicking on a submit button shows visual feedback about whether the answer was correct or incorrect**
+- [x] **A back button is displayed on the card and can be used to return to the previous card in a set sequence**
+- [x] **A next button is displayed on the card and can be used to navigate to the next card in a set sequence**
+- [x] **A shuffle button is used to randomize the order of the cards**
 
 The following **optional** features are implemented:
 
-- [ ] A user's answer may be counted as correct even when it is slightly different from the target answer
-- [ ] A counter displays the user's current and longest streak of correct responses
+- [x] A user's answer may be counted as correct even when it is slightly different from the target answer
+- [x] A counter displays the user's current and longest streak of correct responses
 - [ ] A user can mark a card that they have mastered and have it removed from the pool of answers as well as added to a list of mastered cards
 
 The following **additional** features are implemented:
@@ -31,9 +31,9 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
+(https://imgur.com/a/wW8HBq3)
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+GIF created with ScreenToGif  
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
@@ -41,11 +41,11 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+It's chanllenging to deal with arrays and objects using useState.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2023] [Shengwei Yu]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
