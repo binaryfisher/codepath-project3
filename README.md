@@ -2,7 +2,7 @@
 
 Submitted by: **Shengwei Yu**
 
-This web app: **This app test your basic Javascript knowledge using flashcards.**
+This web app: **This app tests your basic Javascript knowledge using flashcards.**
 
 Time spent: **4** hours spent in total
 
