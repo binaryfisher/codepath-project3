@@ -1,11 +1,21 @@
 import React,{Component, useState} from "react";
 
-const AnswerForm = ({question, answer}) => {
+const AnswerForm = ({question, answer, updateCurrentStreak, updateLongestStreak}) => {
 
     const [inputValue, setInputValue] = useState('');
-
+    const [answerResult, setAnswerResult] = useState('')
+    
+    
     const checkGuess = (event) =>{
-        alert(inputValue);
+       if(answer.toUpperCase() == inputValue.toUpperCase()){
+        setAnswerResult('correct');
+        updateCurrentStreak(1)
+        updateLongestStreak();
+       }else{
+        setAnswerResult('wrong');
+        updateCurrentStreak(0)
+
+       }
     }
 
     const updateInputValue = (event) => {
@@ -13,17 +23,16 @@ const AnswerForm = ({question, answer}) => {
        setInputValue(input);
     }
     return(
-    <div>
+    <div className="answer-form">
         <form>
-            <label>Guess your answer here:</label>
-            <input type="text" onChange={updateInputValue}></input>
-            <button type="submit" className="button submit" 
+            <label>Guess your answer here: </label>
+            <input type="text" onChange={updateInputValue} id={answerResult} placeholder="Plase enter your guess!"></input>
+           
+        </form>
+        <button  className="button submit" 
             onClick={checkGuess}>
             Check Guess
-            </button>
-
-        </form>
-        
+        </button>
 
     </div>
     );

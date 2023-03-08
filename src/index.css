@@ -96,6 +96,28 @@ button {
  font-size: 1.3em;
  
 }
+.answer-form{
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+  margin-top: 30px;
+}
+input{
+  height: 40px;
+  border-radius: 5px;
+  border: 3px solid #ccc;
+  outline: none;
+  
+}
+
+#correct{
+  border: 3px solid #04AA6D;
+}
+
+#wrong{
+  border: 3px solid red;
+}
 
 
 

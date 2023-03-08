@@ -1,15 +1,18 @@
-import { useState } from 'react'
+import {Component, useState } from 'react'
 import './App.css'
 import flashCardsJason from './cards.json'
 import AnswerForm from './Components/answerForm'
 
+
 function App() {
+
   const[cardContent, setCardContent] = useState("Let's start!")
   const[cardIndex, setCardIndex] = useState(0);
   const[classList, setClassList] = useState("card")
   const[flashCards, setFlashCards] = useState(flashCardsJason.cards);
-  const[currentStreak, setCurrentStreak] = useState(0);
-  const[longestStreak, setLongestStreak] = useState(0);
+  const [currentStreak, setCurrentStreak] = useState(0);
+  const [longestStreak, setLongestStreak] = useState(0);
+  
  
  
   
@@ -58,15 +61,9 @@ function App() {
  const shuffleCards = () =>{
   const greeting = flashCards.shift();
   let currentIndex = flashCards.length,  randomIndex;
-
-  // While there remain elements to shuffle.
   while (currentIndex != 0) {
-
-    // Pick a remaining element.
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex--;
-
-    // And swap it with the current element.
     [flashCards[currentIndex], flashCards[randomIndex]] = [
       flashCards[randomIndex], flashCards[currentIndex]];
   }
@@ -75,6 +72,19 @@ function App() {
 
  }
 
+ const updateCurrentStreak = (num) => {
+    if(num != 0){
+      setCurrentStreak(currentStreak + num);
+    }else{
+      setCurrentStreak(0);
+    }  
+  
+ };
+const updateLongestStreak = () => {
+  if(longestStreak <= currentStreak){
+    setLongestStreak(currentStreak + 1);
+  }
+}
 
   return (
     <div className="App">
@@ -88,7 +98,7 @@ function App() {
       <div className={classList} id={flashCards[cardIndex].diffculty }  onClick={turnCards}>
         <p className="card-content" >{cardContent }</p>
       </div>
-      <AnswerForm question="hello" answer="hehhe"/>
+      <AnswerForm question={flashCards[cardIndex].question} answer={flashCards[cardIndex].answer} updateCurrentStreak={updateCurrentStreak} updateLongestStreak={updateLongestStreak} />
       <div className='control-panel'>
       <button className='button' onClick={prevCard}>&nbsp;&lt; Prev</button>
       <button className='button' onClick={shuffleCards}>Shuffle</button>
